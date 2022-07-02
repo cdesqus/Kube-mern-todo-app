@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: todoapp
+    namespace: stagging
+    labels:
+      app: todoapp
+spec:
+  selector:
+    matchLabels:
+      app: todoapp
+  template:
+    metadata:
+      labels:
+        app: todoapp
+    spec:
+      containers:
+        - name: todoapp
+          image: harjay88/fronttodoapp
+          env:
+          - name: SERVER
+            value: mongodb://admin:danmerasahina@172.20.38.172:27017/todos  # di isi dengan endpoint mongo
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "50M"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: todoapi
+    namespace: stagging
+    labels:
+      app: todoapi
+spec:
+  selector:
+    matchLabels:
+      app: todoapi
+  template:
+    metadata:
+      labels:
+        app: todoapi
+    spec:
+      containers:
+        - name: todoapi
+          image: harjay88/backendtodoapptest
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "50M"

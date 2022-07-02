@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2022-07-01T19:08:36Z"
+  labels:
+    kubernetes.io/metadata.name: production
+  name: production
+  resourceVersion: "22537"
+  uid: 65323057-1da3-4a62-ac15-250c55ab6546
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
