@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: tdappr.teamtss.xyz
+    - host: tdappr.teamtss.xyz #host route53
       http:
         paths:
           - path: /

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: todoappr
-          image: harjay88/fronttodoappr
+          image: harjay88/fronttodoappr #Image Frontend
           env:
           - name: SERVER
             value: mongodb://admin:danmerasahina@172.20.38.172:27017/todos  # di isi dengan endpoint mongo

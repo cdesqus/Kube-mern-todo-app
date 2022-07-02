@@ -5,7 +5,7 @@ metadata:
   namespace: stagging
 spec:
   selector:
-    app: todoapp
+    app: todoapp ##To-Frontend
   type: ClusterIP
   ports:
     - port: 80
